@@ -9,7 +9,14 @@ export default function Hooks() {
       setStateHook('The useEffect Loaded Me!');
     }, 5000);
     return () => clearTimeout(timer);
-  }, []);
+  }, [stateHook]);
+  // CLEAR TIMEOUT IS INHERIT TO setTimeout.  Need to call in order to reset timer.
 
-  return <div>{stateHook}</div>;
+  // ADDED DEPENDENCY ARRAY ABOVE TO TEST THE RE-RUNNING OF USEEFFECT
+  return (
+    <>
+      <div>{stateHook}</div>
+      <button type="button" onClick={() => setStateHook('New Value')}>Button To Click</button>
+    </>
+  );
 }

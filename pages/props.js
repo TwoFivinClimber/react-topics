@@ -6,12 +6,10 @@ export default function Props() {
     <div>
       <Loading /> {/* OPEN THE LOADING COMPONENT TO SEE HOW THE PROPS ARE HANDLED */}
       <Loading color="green" />
-      <Loading color="orange" />
-      <Loading color="purple" />
-
+      <Loading color="goldenrod" />
       {/* CHILDREN */}
-      <Loading>
-        <p>The children are between BOTH and opening and closing tag for the component</p>
+      <Loading color="blue">
+        <p>The children are between BOTH opening and closing tag for the component</p>
       </Loading>
     </div>
   );

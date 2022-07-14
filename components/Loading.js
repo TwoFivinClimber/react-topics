@@ -8,6 +8,7 @@ import PropTypes from 'prop-types'; // import proptypes package
 export default function Loading({ color, children }) {
   return (
     <div className="text-center mt-5">
+      {children}
       <Spinner
         animation="border"
         style={{
@@ -17,7 +18,6 @@ export default function Loading({ color, children }) {
         }}
       />
       {/* if the children prop is not passed, children will not render */}
-      {children}
     </div>
   );
 }
@@ -30,5 +30,5 @@ Loading.propTypes = {
 
 Loading.defaultProps = {
   color: 'red',
-  children: 'nothing here',
+  children: 'nothing to see here at all',
 };
